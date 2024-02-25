@@ -1,0 +1,32 @@
+添加远程仓库:
+git remote add <远端名称> <仓库路径>
+	远端名称 默认是origin，取决于远端服务器配置
+	仓库路径，从远端服务器获取此URL
+	eg: git remote add origin git@github.com:JinWanChiTangYuan/test.git
+
+查看远程仓库:
+git remote
+
+推送到远程仓库:
+git push [-f] [--set-upstream] [远端名称 [本地分支名][:远端分支名]]
+	如果远端分支名与本地分支名相同，则可以只写本地分支名
+		eg:git push origin master
+	-f 表示强制覆盖
+	--set-upstream 推送到远端的同时并建立起和远端分支的关联关系
+		eg: git push --set-upstream origin master
+	如果当前分支已经和远端分支关联，则可以省略分支名和远端名
+		eg: git push （将master分支推送到已关联的远端分支）
+
+	
+查看本地分支与远端分支的关联关系:
+git branch -vv
+
+从远程仓库克隆:
+git clone <仓库路径> [本地目录]
+
+从本地仓库抓取和拉取:
+抓取: git fetch [远端名称] [远端分支名称] （不合并）
+	如果不指定远端名称和分支名，则抓取所有分支
+拉取: git pull [远端名称] [远端分支名称] （合并）= fetch + merge
+	如果不指定远端名称和分支名，则拉取所有分支
+	

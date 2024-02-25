@@ -1,0 +1,13 @@
+查看修改的状态:	
+git status
+
+添加工作区到暂存区:
+git add 单个文件名|通配符
+git add .
+
+提交暂存区到本地仓库:
+git ccommit -m '注释'
+
+查看提交日志:
+git log
+git lg

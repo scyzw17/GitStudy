@@ -1,0 +1,9 @@
+生成SSH密钥:
+ssh-keygen -t rsa
+	不断回车 若公钥存在自动覆盖
+
+获取公钥:
+cat ~/.ssh/id_rsa.pub
+
+配置公钥后查看是否匹配成功:
+ssh -T git@github.com
